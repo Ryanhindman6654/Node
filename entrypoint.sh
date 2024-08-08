@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 # Pull the latest code if AUTO_UPDATE is set to 1 and the directory is a git repository
@@ -7,12 +6,12 @@ if [[ -d .git ]] && [[ "${AUTO_UPDATE}" == "1" ]]; then
 fi
 
 # Install specific Node packages if NODE_PACKAGES is set
-if [[ -n ${NODE_PACKAGES} ]]; then 
+if [[ -n "${NODE_PACKAGES}" ]]; then 
     npm install ${NODE_PACKAGES}
 fi
 
 # Uninstall specific Node packages if UNNODE_PACKAGES is set
-if [[ -n ${UNNODE_PACKAGES} ]]; then 
+if [[ -n "${UNNODE_PACKAGES}" ]]; then 
     npm uninstall ${UNNODE_PACKAGES}
 fi
 
